@@ -394,7 +394,7 @@ abstract class Magmi_Engine extends DbHelper
         $counter = 0;
         foreach ($traces as $trace) {
             if (isset($trace["file"])) {
-                $fname = str_replace(dirname(__DIR__), "", $trace["file"]);
+                $fname = str_replace(dirname(dirname(__FILE__)), "", $trace["file"]);
                 $trstr .= $fname . ":" . (isset($trace["line"]) ? $trace["line"] : "?") . " - ";
                 if (isset($trace["class"])) {
                     $trstr .= $trace["class"] . "->";
