@@ -121,7 +121,7 @@ class CustomOptionsItemProcessor extends Magmi_ItemProcessor
         $cvalarr = count($valarr);
         for ($i = 0; $i < $cvalarr; $i++) {
             $val = $valarr[$i];
-            if ($i < count($optionTypeIds)) {
+            if ($optionTypeIds && $i < count($optionTypeIds)) {
                 $optionTypeId = $optionTypeIds[$i];
             } else {
                 $sql = "INSERT INTO $t4
