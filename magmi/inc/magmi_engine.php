@@ -409,7 +409,7 @@ abstract class Magmi_Engine extends DbHelper
                 }
             }
             // simple max trace depth fix
-            if (++$counter % 20 == 0) {
+            if (++$counter % 20 === 0) {
                 break;
             }
         }
