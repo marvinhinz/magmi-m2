@@ -36,7 +36,7 @@ class CustomOptionsItemProcessor extends Magmi_ItemProcessor
 
     public function getOptTypeIds($field)
     {
-        return isset($this->_opttypeids[$field]) ? $this->_opttypeids[$field] : null;
+        return isset($this->_opttypeids[$field]) ? $this->_opttypeids[$field] : [];
     }
 
     public function setOptTypeIds($field, $arr)
@@ -121,7 +121,7 @@ class CustomOptionsItemProcessor extends Magmi_ItemProcessor
         $cvalarr = count($valarr);
         for ($i = 0; $i < $cvalarr; $i++) {
             $val = $valarr[$i];
-            if ($optionTypeIds && $i < count($optionTypeIds)) {
+            if ($i < count($optionTypeIds)) {
                 $optionTypeId = $optionTypeIds[$i];
             } else {
                 $sql = "INSERT INTO $t4
